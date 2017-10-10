@@ -1,0 +1,45 @@
+/* ------------------------------------ *\
+    #HEADINGS
+\* ------------------------------------ */
+
+
+//
+// Reusable Heading components that only apply sizing. Named based off desktop
+// size. Not meant to have other visual styles applied here. Colors and fonts
+// should be applied with utilities for endless combinations.
+//
+.c-heading-36 {
+    font-size: rem(22px);
+    line-height: (44px / 36px);
+
+    @include media('sm') {
+        font-size: rem(36px);
+    }
+}
+
+.c-heading-30 {
+    font-size: rem(20px);
+    line-height: (36px / 30px);
+
+    @include media('sm') {
+        font-size: rem(30px);
+    }
+}
+
+.c-heading-24 {
+    font-size: rem(18px);
+    line-height: (29px / 24px);
+
+    @include media('sm') {
+        font-size: rem(24px);
+    }
+}
+
+.c-heading-18 {
+    font-size: rem(16px);
+    line-height: (22px / 18px);
+
+    @include media('sm') {
+        font-size: rem(18px);
+    }
+}

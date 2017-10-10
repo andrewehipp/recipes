@@ -1,0 +1,34 @@
+/* ------------------------------------ *\
+    #NAVIGATION
+\* ------------------------------------ */
+
+//
+// Navigation list
+//
+.c-nav__list {
+    display: flex;
+    align-items: center;
+}
+
+
+//
+// Navigation List item
+//
+.c-nav__item {
+    margin-right: spacer(0.5);
+}
+
+//
+// Navigation link
+//
+// [1] Stateful 'current' version of navigation item.
+//
+.c-nav__link {
+    display: block;
+    color: color('link');
+
+    // [1]
+    .c-nav__item.is-current & {
+        text-decoration: underline;
+    }
+}

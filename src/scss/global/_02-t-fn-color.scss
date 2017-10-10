@@ -1,0 +1,18 @@
+///
+/// Retrieve color from sass map $color-config
+///
+/// @param {string} $color - Name of color to return from `$color-config`.
+///
+/// @require {variable} $color-config
+///
+@function color($color) {
+    @if map-has-key($color-config, $color) {
+        @return map-get($color-config, $color);
+    }
+
+    @else {
+        @warn "`#{$color}` does not have a value set in `#{$color-config}`. (Keys: #{map-keys($color-config)})"; // [2]
+
+        @return null;
+    }
+}

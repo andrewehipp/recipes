@@ -1,0 +1,31 @@
+///
+/// Loop through the breakpoints (layout/extended), output the parent scope and
+/// nest the content in each media query. The mixin must be nested in the class
+/// you wish to generate all the breakpoint modifiers for.
+///
+/// @param {boolean} $extended - Should the mixin use the
+/// $breakpoints-extended-config
+///
+/// PRO TIP: You can wrap `loop-breakpoints` around a selector, but you have to
+/// prepend the selector with `@at-root` to sanitize the returned breakpoint
+/// class name. There should be an example in _07-u-spacing.scss.
+///
+@mixin loop-breakpoints($extended: false) {
+
+    // Output a non-namespaced version. So we don't have to repeat ourselves.
+    & {
+        @content;
+    }
+
+    // Check which breakpoint config we're using.
+    $loop-breakpoints-config: if($extended, $breakpoints-extended-config, $breakpoints-layout-config);
+
+    // Loop through the breakpoints.
+    @each $breakpoint-name, $breakpoint-value in $loop-breakpoints-config {
+        &\@#{$breakpoint-name} {
+            @include media($breakpoint-name) {
+                @content;
+            }
+        }
+    }
+}

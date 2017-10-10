@@ -1,0 +1,31 @@
+/* ------------------------------------ *\
+    #COLOR UTILITIES
+\* ------------------------------------ */
+
+$color-utilities-config: $color-config;
+
+//
+// Color utilities to apply a specific color.
+//
+@each $color-name, $color-value in $color-utilities-config {
+    .u-color-#{$color-name} {
+        color: $color-value;
+    }
+}
+
+
+// ALTERNATE OPTIMIZED USAGE
+//
+// Selectively generate color classes for each color in $color-utilities
+// $color-utilities-config: (
+//     'link',
+//     'grey',
+// );
+//
+// Color utilities to force a specific color.
+//
+// @each $color in $color-utilities-config {
+//     .u-color-#{$color} {
+//         color: color($color);
+//     }
+// }

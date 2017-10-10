@@ -1,0 +1,16 @@
+/// Spacer Function
+/// @param {Number} $number - A unitless number to multiply against the $spacing-unit
+/// @return {String} - Pixel based number.
+@function spacer($number: 1) {
+    @if unitless($number) != true {
+        @warn '`spacer()` was passed #{$number} but it requires a unitless number.';
+
+        @return 0;
+    }
+
+    @else if $number == 0 {
+        @return 0;
+    }
+
+    @return $number * $spacing-unit;
+}

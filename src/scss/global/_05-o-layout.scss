@@ -1,0 +1,26 @@
+/* ------------------------------------ *\
+    #LAYOUT
+\* ------------------------------------ */
+
+
+.o-layout {
+    @include media('md') {
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        grid-gap: 30px;
+    }
+}
+
+.o-layout__sidebar {
+    @include media('md') {
+        flex: 0 0 auto;
+        width: 300px;
+    }
+}
+
+.o-layout__content {
+    @include media('md') {
+        flex-grow: 1;
+    }
+}

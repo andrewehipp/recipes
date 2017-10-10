@@ -1,0 +1,22 @@
+/* ------------------------------------ *\
+    #SPACING UTILITIES
+\* ------------------------------------ */
+
+
+// Spacing utilities at different breakpoints
+$spacing-config: (
+    'none':  0,
+    '10':   10px,
+    '20':   20px,
+    '40':   40px,
+    '60':   60px,
+);
+
+
+@include loop-breakpoints() {
+    @each $spacing-name, $spacing-value in $spacing-config {
+        @at-root .u-spacing-#{$spacing-name}#{&} {
+            margin-bottom: $spacing-value;
+        }
+    }
+}

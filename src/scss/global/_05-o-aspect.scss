@@ -1,0 +1,59 @@
+/* ------------------------------------ *\
+    #ASPECT
+\* ------------------------------------ */
+
+// Config to easily generate modifiers for different image aspect ratios
+$aspect-config: (
+    '16x9': percentage(9 / 16),
+);
+
+
+//
+// Enforce an aspect ratio on a responsive image before the page loads. Uses
+// the same trick as responsive videos.
+//
+// [1] Hide any access overflow of the image in case it doesn't quite fit.
+// [2] Padding 100% creates a square by default.
+// [3] Support video content
+//
+.o-aspect {
+    overflow: hidden; // [1]
+    margin-bottom: spacer(1);
+    width: 100%;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-top: 100%; // [2]
+    }
+
+    & > * {
+        margin: 0;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    // [3]
+    & > iframe,
+    & > embed,
+    & > video {
+        height: 100%;
+    }
+}
+
+
+//
+// Loop through the config and build out additional sizes.
+//
+@each $prop, $value in $aspect-config {
+    .o-aspect--#{$prop} {
+        &::before {
+            padding-top: $value;
+        }
+    }
+}
