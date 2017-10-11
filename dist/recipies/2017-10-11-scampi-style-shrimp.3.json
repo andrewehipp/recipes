@@ -1,0 +1,70 @@
+{
+    "name": "Scampi-Style Shrimp",
+    "source": "Don & Sally Hipp",
+    "servings": 2,
+    "date": "2017-10-11",
+    "description": "Yummy shrimp scampy",
+    "Prep": 10,
+    "Cook": 10,
+    "ingredients": [
+        {
+            "name": "Raw Shrimp",
+            "prep": "Shelled and Deveined",
+            "amount": 0.5,
+            "units": "lb"
+        },
+        {
+            "name": "Butter",
+            "amount": 4,
+            "units": "tbsp"
+        },
+        {
+            "name": "Green Onion",
+            "prep": "Minced",
+            "amount": 1,
+            "units": "tbsp"
+        },
+        {
+            "name": "Garlic",
+            "prep": "Minced",
+            "amount": 4,
+            "units": "cloves"
+        },
+        {
+            "name": "Salt",
+            "amount": 0.25,
+            "units": "tsp"
+        },
+        {
+            "name": "Parsley",
+            "amount": 2,
+            "units": "tbsp"
+        },
+        {
+            "name": "Lemon Peel",
+            "amount": 0.25,
+            "units": "tsp"
+        }
+    ],
+    "instructions": [
+        {
+            "body": "In wide frying pan melt butter and add all other ingredients. Cook on medium heat approximately 5 minutes. Stir occasionally.",
+            "imagesFromGallery": [
+                0
+            ]
+        }
+    ],
+    "notes": [
+        "Served with liguinie and green veggies",
+        "Careful not to cook everything too long. The shrimp will shrink and become tough."
+    ],
+    "gallery": [
+        {
+            "id": 0,
+            "image": "http://www.placehold.it/1600x1200",
+            "width": 1600,
+            "height": 1200,
+            "caption": "Final Results!"
+        }
+    ]
+}
